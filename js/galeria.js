@@ -3,29 +3,39 @@ const obras= [
 {
     nombre: "Pulse Room",
     año: 2006,
-    imagen:"img/lozano-hemmer-1.jpg" 
+    imagen:"../img/lozano-hemmer.jpg" 
 
 },
 {
     nombre: "Zoom Pavillon",
     año:2015,
-    imagen:""
+    imagen:"../img/lozano-hemmer-3.jpg"
 
 },
 {
     nombre:"Border tuner",
     año:2019,
-    imgen:""
+    imagen:"../img/lozano-hemmer-2.jpg"
 },
 {
     nombre:"33 Questions per minute",
     año:2000,
-    imagen:""
+    imagen:"../img/lozano-hemmer-1.jpg"
 },
 {
     nombre:"Sandbox",
     año:2010,
-    imagen:""
+    imagen:"../img/lozano-hemmer.jpg"
 }
 ];
 //termina el array
+const galeria = document.getElementById ("galeria");
+//recorta el array de obras 
+for (let i = 0; i < obras.length; i++){
+    galeria.innerHTML +=`  <article>
+    <img src="${obras[i].imagen}" alt="${obras[i].nombre}">
+    <h3>${obras[i].nombre}</h3>
+    <p>Año: ${obras[i].año}</p>
+    </article> 
+    `;
+}
