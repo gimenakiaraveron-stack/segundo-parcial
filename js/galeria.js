@@ -39,3 +39,10 @@ for (let i = 0; i < obras.length; i++){
     </article> 
     `;
 }
+//Botón para cambiar el diseño de la galería 
+const boton = document.getElementById("cambiarDiseño");
+boton.addEventListener ("click", cambiarDiseño);
+
+function cambiarDiseño() {
+    galeria.classList.toggle("nuevoDiseño");
+}
